@@ -30,6 +30,17 @@ npm test                  # 9 个用例，含两个真实 stdio MCP 握手
 cp config.example.json config.json   # 按需改 snowluma / webSearch
 ```
 
+### 装法与别的仓库不同
+
+它不是「装完就有命令」的 CLI，而是被 MCP 客户端（DSH / Claude Desktop / Cursor / Cline）**当子进程启动**的 server：
+
+```bash
+# 只想验证它能起来（stdio 握手成功后 Ctrl+C 退出即可）
+npx github:whatxin7/dsh-mcp-safe-tools
+```
+
+配置里必须写**本机绝对路径**（`command: node`，`args: ["/绝对路径/src/mcp-web-search-safe.js"]`），因为客户端不会去猜你在哪个目录 clone 的。
+
 Node ≥ 20。测试里的 MCP 用例会真的 `spawn` 两个 server，走 `initialize` → `tools/list`，断言工具清单 —— 不是"看代码猜它能跑"。
 
 ## 接到 DSH / 任意 MCP 客户端
