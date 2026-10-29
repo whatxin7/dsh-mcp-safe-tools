@@ -1,0 +1,54 @@
+{
+  "name": "dsh-mcp-safe-tools",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "description": "三个可复用的只读 MCP server：安全联网搜索/抓取（防 SSRF、防 DNS rebinding）、SnowLuma 网关探活，以及一套出站脱敏与媒体白名单工具。",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ssrf",
+    "web-search",
+    "web-fetch",
+    "onebot",
+    "snowluma",
+    "llm-agent"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    "./safe-fetch": "./src/safe-fetch.js",
+    "./web-search": "./src/web-search.js",
+    "./tool-groups": "./src/tool-groups.js",
+    "./md": "./src/md-to-plain.js",
+    "./sensitive": "./src/sensitive.js",
+    "./media": "./src/media-out.js"
+  },
+  "files": [
+    "src",
+    "config.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "mcp:web": "node src/mcp-web-search-safe.js",
+    "mcp:host": "node src/mcp-host-server.js",
+    "mcp:qq": "node src/mcp-snowluma-safe.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "js-yaml": "^4.3.2",
+    "zod": "^4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Derpyu520/dsh-mcp-safe-tools.git"
+  },
+  "homepage": "https://github.com/Derpyu520/dsh-mcp-safe-tools#readme",
+  "bugs": {
+    "url": "https://github.com/Derpyu520/dsh-mcp-safe-tools/issues"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "snowluma": {
+    "httpUrl": "http://127.0.0.1:3000",
+    "accessToken": "",
+    "homeDir": "C:/SnowLuma",
+    "launcherPath": "C:/SnowLuma/launcher.bat"
+  },
+  "webSearch": {
+    "provider": "deepseek",
+    "baseURL": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "maxResults": 8,
+    "maxTokens": 1024,
+    "timeoutMs": 20000
+  },
+  "socialV2": {
+    "toolGroups": {
+      "active": ["core", "memory"]
+    }
+  }
+}
