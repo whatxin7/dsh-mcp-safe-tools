@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "dsh-mcp-safe-tools",
   "version": "1.0.0",
   "private": false,
@@ -45,10 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Derpyu520/dsh-mcp-safe-tools.git"
+    "url": "git+https://github.com/whatxin7/dsh-mcp-safe-tools.git"
   },
-  "homepage": "https://github.com/Derpyu520/dsh-mcp-safe-tools#readme",
+  "homepage": "https://github.com/whatxin7/dsh-mcp-safe-tools#readme",
   "bugs": {
-    "url": "https://github.com/Derpyu520/dsh-mcp-safe-tools/issues"
+    "url": "https://github.com/whatxin7/dsh-mcp-safe-tools/issues"
   }
 }
+
+
